@@ -42,18 +42,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyv-ze-Q0c">
-                                <rect key="frame" x="186" y="433" width="43" height="23"/>
+                                <rect key="frame" x="79" y="434" width="47" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="STARt"/>
+                                <state key="normal" title="START"/>
                                 <connections>
                                     <action selector="startTask:" destination="F9b-Ah-611" eventType="touchUpInside" id="4x9-Ry-QfZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHJ-hD-C0A">
+                                <rect key="frame" x="303" y="433" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="STOP"/>
+                                <connections>
+                                    <action selector="stopTask:" destination="F9b-Ah-611" eventType="touchUpInside" id="S8a-Me-XmI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOf-as-5X3">
+                                <rect key="frame" x="116" y="235" width="201" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="77"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="lRo-9B-E2c"/>
                     </view>
                     <navigationItem key="navigationItem" id="Riv-mH-xFW"/>
+                    <connections>
+                        <outlet property="labelTimeElapsed" destination="GOf-as-5X3" id="cz6-pp-C2T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83f-CS-P62" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

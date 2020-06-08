@@ -14,6 +14,10 @@ class ChildViewController: UIViewController {
     var taskTimer = Timer()
     var timeElapsed: TimeInterval = 0
     
+    // MARK: - Outlets
+    
+    @IBOutlet weak var labelTimeElapsed: UILabel!
+    
     // MARK: - View Life Cycle Methods
 
     // This method runs once when the view loads
@@ -31,11 +35,21 @@ class ChildViewController: UIViewController {
         taskTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ChildViewController.tick), userInfo: nil, repeats: true)
     }
     
+    @IBAction func stopTask(_ sender: UIButton) {
+        
+        // Stop the timer
+        taskTimer.invalidate()
+    }
+    
     // Show how many seconds have elapsed
     @objc func tick() {
         
         // Increment the time elapsed
         timeElapsed += 1
+        
+        //Update the label
+        labelTimeElapsed.text = String(Int(timeElapsed))
+        
         print(timeElapsed)
         
     }
