@@ -9,14 +9,36 @@
 import UIKit
 
 class ChildViewController: UIViewController {
+    
+    // MARK: - Properties
+    var taskTimer = Timer()
+    var timeElapsed: TimeInterval = 0
+    
+    // MARK: - View Life Cycle Methods
 
+    // This method runs once when the view loads
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
     
 
+    @IBAction func startTask(_ sender: UIButton) {
+        
+        // Start the timer ticking
+        taskTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ChildViewController.tick), userInfo: nil, repeats: true)
+    }
+    
+    // Show how many seconds have elapsed
+    @objc func tick() {
+        
+        // Increment the time elapsed
+        timeElapsed += 1
+        print(timeElapsed)
+        
+    }
     /*
     // MARK: - Navigation
 

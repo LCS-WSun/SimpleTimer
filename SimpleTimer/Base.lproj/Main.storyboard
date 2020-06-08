@@ -40,6 +40,16 @@
                     <view key="view" contentMode="scaleToFill" id="XpG-6M-Tgh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyv-ze-Q0c">
+                                <rect key="frame" x="186" y="433" width="43" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="STARt"/>
+                                <connections>
+                                    <action selector="startTask:" destination="F9b-Ah-611" eventType="touchUpInside" id="4x9-Ry-QfZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="lRo-9B-E2c"/>
                     </view>
@@ -47,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83f-CS-P62" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1954" y="108"/>
+            <point key="canvasLocation" x="1953.6231884057972" y="107.8125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bPY-HN-Bza">
