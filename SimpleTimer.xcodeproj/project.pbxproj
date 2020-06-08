@@ -13,6 +13,7 @@
 		825FFDB1248DC0F500D5E006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 825FFDAF248DC0F500D5E006 /* Main.storyboard */; };
 		825FFDB3248DC0FE00D5E006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 825FFDB2248DC0FE00D5E006 /* Assets.xcassets */; };
 		825FFDB6248DC0FE00D5E006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 825FFDB4248DC0FE00D5E006 /* LaunchScreen.storyboard */; };
+		825FFDBE248DC22B00D5E006 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825FFDBD248DC22B00D5E006 /* ChildViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		825FFDB2248DC0FE00D5E006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		825FFDB5248DC0FE00D5E006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		825FFDB7248DC0FE00D5E006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		825FFDBD248DC22B00D5E006 /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				825FFDB2248DC0FE00D5E006 /* Assets.xcassets */,
 				825FFDB4248DC0FE00D5E006 /* LaunchScreen.storyboard */,
 				825FFDB7248DC0FE00D5E006 /* Info.plist */,
+				825FFDBD248DC22B00D5E006 /* ChildViewController.swift */,
 			);
 			path = SimpleTimer;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				825FFDAE248DC0F500D5E006 /* ParentViewController.swift in Sources */,
 				825FFDAA248DC0F500D5E006 /* AppDelegate.swift in Sources */,
 				825FFDAC248DC0F500D5E006 /* SceneDelegate.swift in Sources */,
+				825FFDBE248DC22B00D5E006 /* ChildViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
