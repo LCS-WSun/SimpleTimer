@@ -57,9 +57,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHJ-hD-C0A">
-                                <rect key="frame" x="303" y="433" width="39" height="30"/>
+                                <rect key="frame" x="300" y="433" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="STOP"/>
+                                <state key="normal" title="RESET"/>
                                 <connections>
                                     <action selector="stopTask:" destination="F9b-Ah-611" eventType="touchUpInside" id="S8a-Me-XmI"/>
                                 </connections>
@@ -78,6 +78,8 @@
                     <navigationItem key="navigationItem" id="Riv-mH-xFW"/>
                     <connections>
                         <outlet property="labelTimeElapsed" destination="GOf-as-5X3" id="cz6-pp-C2T"/>
+                        <outlet property="startTaskOutlet" destination="Jyv-ze-Q0c" id="Yku-us-Bdc"/>
+                        <outlet property="stopTaskOutlet" destination="XHJ-hD-C0A" id="lge-p5-GFD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83f-CS-P62" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
