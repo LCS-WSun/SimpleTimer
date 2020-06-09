@@ -13,9 +13,10 @@ class ChildViewController: UIViewController {
     // MARK: - Properties
 
     //We created the variable task timer that is linked to the object timer
+   
+
+    
     var taskTimer = Timer()
-    
-    
     //We created a variable called time Elapsed where the initial time is set to 0 well since, the user hasn't pressed the button yet
     var timeElapsed: TimeInterval = 0
     
@@ -26,11 +27,13 @@ class ChildViewController: UIViewController {
     
     //This is the label that will tell the seconds going up on the user interface
     @IBOutlet weak var labelTimeElapsed: UILabel!
+
     
+    //Outlets for the enabling and disabling of the buttons
     @IBOutlet weak var startTaskOutlet: UIButton!
-    
-    
     @IBOutlet weak var stopTaskOutlet: UIButton!
+    
+    
     
     // MARK: - View Life Cycle Methods
 
@@ -41,10 +44,11 @@ class ChildViewController: UIViewController {
     startTaskOutlet.isEnabled = true
     stopTaskOutlet.isEnabled = false
         
-        
     
         // Do any additional setup after loading the view.
     }
+    
+    
     
     
     
@@ -58,8 +62,6 @@ class ChildViewController: UIViewController {
         
         taskTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ChildViewController.tick), userInfo: nil, repeats: true)
         
-    
-
     }
     
     
@@ -67,7 +69,7 @@ class ChildViewController: UIViewController {
     
     //The stop button
     @IBAction func stopTask(_ sender: UIButton) {
-        startTaskOutlet.isEnabled = true 
+        startTaskOutlet.isEnabled = true
         stopTaskOutlet.isEnabled = false
         
         // Stop the timer - .indvalidate is a function that stops a timer
@@ -75,8 +77,6 @@ class ChildViewController: UIViewController {
         taskTimer.invalidate()
         timeElapsed = 0
         labelTimeElapsed.text = ("0")
-        print(timeElapsed)
-    
     }
     
     
@@ -95,8 +95,6 @@ class ChildViewController: UIViewController {
         //Update the label by tapping into it with.text when we must change its property to string as it is a text and aswell to Int because it doesn't have to show 2 decimal places
         
         labelTimeElapsed.text = String(Int(timeElapsed))
-        
-        print(timeElapsed)
         
     
     }

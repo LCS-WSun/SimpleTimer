@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82550C83248FE11700BE275D /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82550C82248FE11700BE275D /* Protocol.swift */; };
+		82550C85248FECB800BE275D /* dictionaryTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82550C84248FECB800BE275D /* dictionaryTime.swift */; };
 		825FFDAA248DC0F500D5E006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825FFDA9248DC0F500D5E006 /* AppDelegate.swift */; };
 		825FFDAC248DC0F500D5E006 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825FFDAB248DC0F500D5E006 /* SceneDelegate.swift */; };
 		825FFDAE248DC0F500D5E006 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825FFDAD248DC0F500D5E006 /* ParentViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82550C82248FE11700BE275D /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		82550C84248FECB800BE275D /* dictionaryTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dictionaryTime.swift; sourceTree = "<group>"; };
 		825FFDA6248DC0F500D5E006 /* SimpleTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		825FFDA9248DC0F500D5E006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		825FFDAB248DC0F500D5E006 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				825FFDB4248DC0FE00D5E006 /* LaunchScreen.storyboard */,
 				825FFDB7248DC0FE00D5E006 /* Info.plist */,
 				825FFDBD248DC22B00D5E006 /* ChildViewController.swift */,
+				82550C82248FE11700BE275D /* Protocol.swift */,
+				82550C84248FECB800BE275D /* dictionaryTime.swift */,
 			);
 			path = SimpleTimer;
 			sourceTree = "<group>";
@@ -145,6 +151,8 @@
 				825FFDAA248DC0F500D5E006 /* AppDelegate.swift in Sources */,
 				825FFDAC248DC0F500D5E006 /* SceneDelegate.swift in Sources */,
 				825FFDBE248DC22B00D5E006 /* ChildViewController.swift in Sources */,
+				82550C85248FECB800BE275D /* dictionaryTime.swift in Sources */,
+				82550C83248FE11700BE275D /* Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
