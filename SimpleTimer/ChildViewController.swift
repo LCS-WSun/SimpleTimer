@@ -50,7 +50,8 @@ class ChildViewController: UIViewController {
     
     //We created a button that starts the task, this will trigger the folowing code below
     @IBAction func startTask(_ sender: UIButton) {
-        
+        startTaskOutlet.isEnabled = false
+        stopTaskOutlet.isEnabled = true
         
 // essentially, we call back to the timer object which we clarfied as a variabl, .scheduled timer is the specifications of the timer which timer interval is count in seconds and we set it for 1 second going up, target? not quite sure what it means but it means when the timer is ticking, it referencing to iteslf? The selector not that confident about its function. But then afterwards, we claim that is referencing to the child view controller. .tick is the function that triggers the timer to go I supopse? the user info? again not too sure about its function. And finally repaet, well it is obvious it indicates that this timer may repeat itself and is in a loop and is only triggered when we press the START button
         
@@ -66,6 +67,8 @@ class ChildViewController: UIViewController {
     
     //The stop button
     @IBAction func stopTask(_ sender: UIButton) {
+        startTaskOutlet.isEnabled = true 
+        stopTaskOutlet.isEnabled = false
         
         // Stop the timer - .indvalidate is a function that stops a timer
         
