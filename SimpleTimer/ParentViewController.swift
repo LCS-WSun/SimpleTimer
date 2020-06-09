@@ -8,39 +8,46 @@
 
 import UIKit
 
-class ParentViewController: UIViewController, timeSaver {
-
+class ParentViewController: UIViewController, TimeSaver {
+    
+    
+    
     
     // MARK: Properties
-    var timeSaved: [timeSaved] = []
+    var savedTimeValues: [TimeValue] = []
     
     
-
+    //MARK Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    // Segue to childView
-       override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
-           //Inputting destination of segeu
-           childController = segue.destination as?
-        ChildViewController }
-
-               // Register this controller, the parent, as something that can save books
-            ChildViewController.delegate = self
-               
-           }
+    @IBOutlet weak var timeSavedLabel: UILabel!
+    // Segue function
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // What is the destination of this segue?
+        if let childController = segue.destination as?
+            ChildViewController {
+            
+            // setting the delegate to the childview
+            childController.delegate = self
+            
+        }
+        
+        
+        
+        
+        
+        
+    }
     
-    
-    
-    
-    
-    @IBOutlet weak var amountOfTimeWorked: UILabel!
+    func save(new: TimeValue) {
+        savedTimeValues.append(new)
+        print("Number of values in saved time values is \(savedTimeValues.count)")
+    }
     
 }
-}
-

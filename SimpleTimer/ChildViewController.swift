@@ -35,9 +35,9 @@ class ChildViewController: UIViewController {
     
     
     
-    // MARK: - View Life Cycle Methods
+// MARK: - View Life Cycle Methods
 
-      var delegate: timeSaver?
+var delegate: TimeSaver?
     
     
     // This method runs once when the view loads
@@ -72,14 +72,32 @@ class ChildViewController: UIViewController {
     
     //The stop button
     @IBAction func stopTask(_ sender: UIButton) {
+        
+        
+        
+        
+        //Update button state
         startTaskOutlet.isEnabled = true
         stopTaskOutlet.isEnabled = false
+        
+        
+        //Save the time that user stopped to parent view
+        self.delegate?.save(new: TimeValue(interval: timeElapsed))
+        
         
         // Stop the timer - .indvalidate is a function that stops a timer
         
         taskTimer.invalidate()
         timeElapsed = 0
         labelTimeElapsed.text = ("0")
+        
+        
+ 
+               
+        
+        
+        
+        
     }
     
     

@@ -35,6 +35,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="DXf-RZ-j6Z"/>
+                    <connections>
+                        <outlet property="timeSavedLabel" destination="Mvd-b4-yaW" id="OGW-v8-sUw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

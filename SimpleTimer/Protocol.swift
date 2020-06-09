@@ -6,8 +6,10 @@
 //  Copyright © 2020 Wesley Sun. All rights reserved.
 //
 
-protocol timeSaver {
+
+//Creating a protocol that saves the time which is linked to the structure timeSaved
+protocol TimeSaver {
     
-    func save(new: timeSaved)
+    func save(new: TimeValue)
     
 }

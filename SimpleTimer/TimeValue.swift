@@ -7,10 +7,11 @@
 //
 
 import Foundation
-//Storing a structure to keep time saved of user 
+import UIKit
 
-struct timeSaved {
-    var timeNumber: String
-    var timeCount: Int
+//Storing a structure to keep time saved of user
+
+struct TimeValue {
+    var interval: TimeInterval
 }
 
