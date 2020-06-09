@@ -49,9 +49,12 @@ class ChildViewController: UIViewController {
     @IBAction func stopTask(_ sender: UIButton) {
         
         // Stop the timer - .indvalidate is a function that stops a timer
-        taskTimer.invalidate()
         
-        labelTimeElapsed.text = "0"
+        taskTimer.invalidate()
+        timeElapsed = 0
+        labelTimeElapsed.text = ("0")
+        print(timeElapsed)
+    
     }
     
     
@@ -65,14 +68,24 @@ class ChildViewController: UIViewController {
         // Increment the time elapsed by 1 second
         timeElapsed += 1
         
+        
+        
         //Update the label by tapping into it with.text when we must change its property to string as it is a text and aswell to Int because it doesn't have to show 2 decimal places
         
         labelTimeElapsed.text = String(Int(timeElapsed))
         
         print(timeElapsed)
         
+    
     }
+    
+    
     /*
+     
+     
+     
+     
+     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
