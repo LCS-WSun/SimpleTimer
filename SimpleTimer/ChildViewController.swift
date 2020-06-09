@@ -50,7 +50,14 @@ class ChildViewController: UIViewController {
         
         // Stop the timer - .indvalidate is a function that stops a timer
         taskTimer.invalidate()
+        
+        labelTimeElapsed.text = "0"
     }
+    
+    
+    
+    
+    
     
     // The Objc func is what is used to call back to the timer object and work with the function tick
     @objc func tick() {
