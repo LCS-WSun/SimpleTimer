@@ -7,6 +7,10 @@
 //
 
 import Foundation
-//Storing a Dictionary to keep times in trial
+//Storing a structure to keep time saved of user 
 
-var timeSaved: [Sring: Int] = [:]
+struct timeSaved {
+    var timeNumber: String
+    var timeCount: Int
+}
+

@@ -6,8 +6,8 @@
 //  Copyright © 2020 Wesley Sun. All rights reserved.
 //
 
-import Foundation
-protocol timerSaver {
+protocol timeSaver {
     
-    func save(new:timeSaver) 
+    func save(new: timeSaved)
+    
 }

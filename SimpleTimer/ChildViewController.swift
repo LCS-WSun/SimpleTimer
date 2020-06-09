@@ -37,6 +37,9 @@ class ChildViewController: UIViewController {
     
     // MARK: - View Life Cycle Methods
 
+      var delegate: timeSaver?
+    
+    
     // This method runs once when the view loads
     override func viewDidLoad() {
         super.viewDidLoad()

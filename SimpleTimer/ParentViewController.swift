@@ -8,15 +8,14 @@
 
 import UIKit
 
-class ParentViewController: UIViewController,   {
+class ParentViewController: UIViewController, timeSaver {
 
+    
     // MARK: Properties
+    var timeSaved: [timeSaved] = []
     
     
-    var timeSaver = [Int]()
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,8 +25,8 @@ class ParentViewController: UIViewController,   {
        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
            //Inputting destination of segeu
-           if let childController = segue.destination as?
-            ChildViewController {
+           childController = segue.destination as?
+        ChildViewController }
 
                // Register this controller, the parent, as something that can save books
             ChildViewController.delegate = self
