@@ -10,6 +10,6 @@
 //Creating a protocol that saves the time which is linked to the structure timeSaved
 protocol TimeSaver {
     
+    //Protocol to save TimeValue aka the structure value 
     func save(new: TimeValue)
-    
 }

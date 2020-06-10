@@ -12,6 +12,7 @@ import UIKit
 //Storing a structure to keep time saved of user
 
 struct TimeValue {
+    //made a variable named interval which its value is TimeInterval
     var interval: TimeInterval
 }
 

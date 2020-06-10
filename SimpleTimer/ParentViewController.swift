@@ -11,9 +11,10 @@ import UIKit
 class ParentViewController: UIViewController, TimeSaver {
     
     
-    
-    
     // MARK: Properties
+    
+    //make a new variable that then is related to the structure and starts off as a empty array
+    
     var savedTimeValues: [TimeValue] = []
     
     
@@ -24,30 +25,33 @@ class ParentViewController: UIViewController, TimeSaver {
     }
     
     @IBOutlet weak var timeSavedLabel: UILabel!
+    
     // Segue function
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        // What is the destination of this segue?
+        // a if let statement that delcares the destination of the segue to the childviewController
         if let childController = segue.destination as?
             ChildViewController {
             
-            // setting the delegate to the childview
+            // setting the delegate to childview
             childController.delegate = self
             
         }
         
-        
-        
-        
-        
-        
-    }
-    
+}
+    //The function that will save a new value as stored as a structure
     func save(new: TimeValue) {
-        savedTimeValues.append(new)
-        print("Number of values in saved time values is \(savedTimeValues.count)")
+        
+    //.append which will make a new value in the array
+    savedTimeValues.append(new)
+        
+        
+    //this print statement will say the saved time value in the command tab but I will link it to the label on the parent view controller. we then put the actual value AKA not a string in \() where we put the words .count to count the number of things stored in the array
+
+    print("Number of values in saved time values is \(savedTimeValues.count)")
+        
+        timeSavedLabel.text = String((savedTimeValues.count))
+        
     }
     
 }
