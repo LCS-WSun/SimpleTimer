@@ -70,8 +70,8 @@
 				825FFDB4248DC0FE00D5E006 /* LaunchScreen.storyboard */,
 				825FFDB7248DC0FE00D5E006 /* Info.plist */,
 				825FFDBD248DC22B00D5E006 /* ChildViewController.swift */,
-				82550C82248FE11700BE275D /* Protocol.swift */,
 				82550C84248FECB800BE275D /* TimeValue.swift */,
+				82550C82248FE11700BE275D /* Protocol.swift */,
 			);
 			path = SimpleTimer;
 			sourceTree = "<group>";
