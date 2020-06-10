@@ -45,13 +45,13 @@ class ParentViewController: UIViewController, TimeSaver {
         savedTimeValues.append(new)
         
         //this line of code is first going to the label tapping into its text property and then it is put into a string format where we will use a escape character for saveTimeValues.count which will display on the parent screen
-        timeSavedLabel.text = "Number of times saved from your stopwatch is \(savedTimeValues.count)."
+        timeSavedLabel.text = "Number of times saved from your stopwatch is:  \(savedTimeValues.count)."
         
         let quantityTimeValue = savedTimeValues.count
         
         
         //Displays the time on the screen by being implemented in the label and is displayed a a array
-        timeDisplayedOfArray.text = "Your time  \(savedTimeValues) seconds"
+        timeDisplayedOfArray.text = "Your time:  \(savedTimeValues) seconds"
         
         
         //What I want to happen
@@ -67,7 +67,7 @@ class ParentViewController: UIViewController, TimeSaver {
             averageTime = totalAcrossOfTrials / quantityTimeValue
     }
     //Displaying average time in the label
-        timeAverageLabel.text = "Your Average of Times is \(averageTime)"
+        timeAverageLabel.text = "Your Average of Times is:  \(averageTime)"
     }
     
 }
