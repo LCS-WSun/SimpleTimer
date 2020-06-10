@@ -45,12 +45,13 @@ class ParentViewController: UIViewController, TimeSaver {
     //.append which will make a new value in the array
     savedTimeValues.append(new)
         
-        
+
     //this print statement will say the saved time value in the command tab but I will link it to the label on the parent view controller. we then put the actual value AKA not a string in \() where we put the words .count to count the number of things stored in the array
 
-    print("Number of values in saved time values is \(savedTimeValues.count)")
+        timeSavedLabel.text = "Number of times saved from your stopwatch is \(savedTimeValues.count)."
         
-        timeSavedLabel.text = String((savedTimeValues.count))
+        
+        print("Number of values in saved time values is \(savedTimeValues.count)")
         
     }
     
