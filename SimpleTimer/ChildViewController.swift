@@ -17,7 +17,7 @@ class ChildViewController: UIViewController {
     var taskTimer = Timer()
 
     //We created a variable called time Elapsed where the initial time is set to 0 well since, the user hasn't pressed the button yet
-    var timeElapsed: TimeInterval = 3540
+    var timeElapsed: TimeInterval = 60
     
     
     // MARK: - Outlets
