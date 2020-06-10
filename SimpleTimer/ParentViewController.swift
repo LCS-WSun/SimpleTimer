@@ -15,10 +15,6 @@ class ParentViewController: UIViewController, TimeSaver {
     //make a new variable that then is related to the structure and starts off as a empty array
     var savedTimeValues: [TimeValue] = []
     
-    //Creating variables total time and average time for calculating the average time later on (doesn't work..)
-    var totalTime: Int = 0
-    var averageTime: Int = 0
-    
     
     //MARK Methods
     override func viewDidLoad() {
@@ -64,24 +60,24 @@ class ParentViewController: UIViewController, TimeSaver {
         //What I want to happen
         // let timesAverage = (savedTimeValues) / (quantityTimeValue)
         
-        //New var called totalAcrossTimes set to 0
+        //New var called totalAcrossTimes set to 0 because well no time is stored yet
         var totalAcrossOfTimes = 0
         //for time (defining a constant) in savedTimevalues AKA the array
         for time in savedTimeValues {
-        //totalAcrossOfTimes will add the values of time of the intervals stored in the structure
+        //totalAcrossOfTimes will add the values of time of the intervals stored in the structure and we set it to a Int because intially it is a Doudble. time is the constant and we assign it to the interval from the structure
         totalAcrossOfTimes += Int(time.interval)
-        }
+    }
+        // Avoiding division of 0 with an if statement
         
-        // Avoiding division of 0
         //initial set average times to 0
         var averageTime = 0
         //only will perform the equation when it is above 0
         if savedTimeValues.count > 0 {
-            averageTime = totalAcrossOfTimes / savedTimeValues.count
+        //average time is equal to times values in the array divided by the stored value of times in the array
+        averageTime = totalAcrossOfTimes / savedTimeValues.count
     }
-    //Displaying average time in the label
-        timeAverageLabel.text = "Your Average of Times is:  \(averageTime)"
-        print("\(averageTime)")
+    //Displaying average time in the label with string interpolation
+        timeAverageLabel.text = "Your Average of Time is:  \(averageTime) seconds"
     }
     
 }

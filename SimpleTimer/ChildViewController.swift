@@ -17,7 +17,7 @@ class ChildViewController: UIViewController {
     var taskTimer = Timer()
 
     //We created a variable called time Elapsed where the initial time is set to 0 well since, the user hasn't pressed the button yet
-    var timeElapsed: TimeInterval = 0
+    var timeElapsed: TimeInterval = 3540
     
     
     // MARK: - Outlets
@@ -85,29 +85,40 @@ class ChildViewController: UIViewController {
         
     //Displaying the time in Hours, Minutes, Seconds
   
-        let differentTimes = Int(floor(timeElapsed))
-        
-        let hour = differentTimes / 3600
+        // made a constant called differentTimes and is set as a Int and
+        //floored is a double but we want a Int so we wrap it around () of the timeElapsed or "seconds going up"
+        let timeCountUp = Int(floor(timeElapsed))
+
+        //an hour has 3600 seconds so if you amount of seconds / 3600, you get hour
+        let hour = timeCountUp / 3600
          
-        let minute = (differentTimes % 3600) / 60
+        //for minutes, you get the remainder value from the seconds count up remaindered to 3600 AKA an 1 hour. You then find then get the remainer of the value remainained from the seconds by hour to divide by 60 because there is 60 seconds in a minute
+        let minute = (timeCountUp % 3600) / 60
+        
+        //we make a var for minute and will input the minute we did it through string interpolation
         var minuteString = "\(minute)"
+        
+        //we make an if statement for if the minute is less than 10, because if it is this is indicating that is it an hour, well in the textview's sense
         if minute < 10 {
-            minuteString = "0\(minute)"
+            
+        //we put the 0 there to indivate hour and the minute will run as one number
+        minuteString = "0\(minute)"
     }
         
-        let seconds = (differentTimes % 3600) % 60
+        //seconds is determined by finding the remainder of it in a hour then we find the so the seeconds counted up and then find the remainder of an hour then we find the remainder of that from 60 because well there is 60 seconds in a minute
+        let seconds = (timeCountUp % 3600) % 60
+       
         var secondsString = "\(seconds)"
+        //making a if statement because if seconds is lessn than 10, it should say 09 instead of 10
         if seconds < 10 {
             secondsString = "0\(seconds)"
     }
 
-        
         //Update the label by tapping into it with.text when we must change its property to string as it is a text and aswell to Int because it doesn't have to show 2 decimal places
         
-        //labelTimeElapsed.text = String(Int(timeElapsed))
+        //labelTimeElapsed.text = String(Int(timeElapsed)) - this only showed seconds now it shows h, m , s
+        //this label is aka outlet, we can tap into the text and use string interpolation to show the values
         labelTimeElapsed.text = "\(hour):\(minuteString):\(secondsString)"
-        
-        
         
     }
 }
