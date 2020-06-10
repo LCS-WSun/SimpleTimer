@@ -51,28 +51,28 @@ class ParentViewController: UIViewController, TimeSaver {
         var quantityTimeValue = savedTimeValues.count
         
         
-        //Trying to resolve only showing seconds issue don't know how to fix it
-            let hour = quantityTimeValue / 3600
-        
-            let minute = quantityTimeValue / 60
-            if minute < 3600  {
-            quantityTimeValue = minute
-        
-            if hour >= 3600 {
-            quantityTimeValue = hour
-        
-        }
-            let seconds = quantityTimeValue
-            if seconds < 60 {
-            quantityTimeValue = seconds
-        }
-        
-    }
+//        //Trying to resolve only showing seconds issue don't know how to fix it
+//            let hour = quantityTimeValue / 3600
+//
+//            let minute = quantityTimeValue / 60
+//            if minute < 3600  {
+//            quantityTimeValue = minute
+//
+//            if hour >= 3600 {
+//            quantityTimeValue = hour
+//
+//        }
+//            let seconds = quantityTimeValue
+//            if seconds < 60 {
+//            quantityTimeValue = seconds
+//        }
+//
+//    }
         
         
         //Displays the time on the screen by being implemented in the label and is displayed as a array
         //PROBLEM (only displays in seconds and is quite messy)
-        timeDisplayedOfArray.text = "Your time:  \(quantityTimeValue) seconds"
+        timeDisplayedOfArray.text = "Your time:  \(savedTimeValues) seconds"
         
         
         //What I want to happen
