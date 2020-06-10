@@ -48,14 +48,32 @@ class ParentViewController: UIViewController, TimeSaver {
         timeSavedLabel.text = "Number of times saved from your stopwatch is:  \(savedTimeValues.count)."
         
         //making it more organized and made a constant of the savedTimeValues.count
-        let quantityTimeValue = savedTimeValues.count
+        var quantityTimeValue = savedTimeValues.count
+        
+        
+        //Trying to resolve only showing seconds issue don't know how to fix it
+            let hour = quantityTimeValue / 3600
+        
+            let minute = quantityTimeValue / 60
+            if minute < 3600  {
+            quantityTimeValue = minute
+        
+            if hour >= 3600 {
+            quantityTimeValue = hour
+        
+        }
+            let seconds = quantityTimeValue
+            if seconds < 60 {
+            quantityTimeValue = seconds
+        }
+        
+    }
         
         
         //Displays the time on the screen by being implemented in the label and is displayed as a array
         //PROBLEM (only displays in seconds and is quite messy)
-        timeDisplayedOfArray.text = "Your time:  \(savedTimeValues) seconds"
+        timeDisplayedOfArray.text = "Your time:  \(quantityTimeValue) seconds"
         
-
         
         //What I want to happen
         // let timesAverage = (savedTimeValues) / (quantityTimeValue)
@@ -77,7 +95,7 @@ class ParentViewController: UIViewController, TimeSaver {
         averageTime = totalAcrossOfTimes / savedTimeValues.count
             
             
-//        //Trying to resolve only showing seconds issue, I tried my best, it is not working so I will keep it as seconds 
+//        //Trying to resolve only showing seconds issue, I tried my best, it is not working so I will keep it as seconds
 //                let averageHour = averageTime / 3600
 //
 //                let averageMinute = averageTime / 60
@@ -95,7 +113,6 @@ class ParentViewController: UIViewController, TimeSaver {
 //
 //        }
 
-        
     //Displaying average time in the label with string interpolation
         timeAverageLabel.text = "Your Average of Time is: \(averageTime) seconds "
         
