@@ -88,11 +88,15 @@ class ParentViewController: UIViewController, TimeSaver {
         // Avoiding division of 0 with an if statement
         
         //initial set average times to 0
-        var averageTime = 0
+       var averageTime: Double = 0
+        
+        
         //only will perform the equation when it is above 0
         if savedTimeValues.count > 0 {
         //average time is equal to times values in the array divided by the stored value of times in the array
-        averageTime = totalAcrossOfTimes / savedTimeValues.count
+        averageTime = Double(totalAcrossOfTimes) / Double(savedTimeValues.count)
+        averageTime.round()
+            
             
             
 //        //Trying to resolve only showing seconds issue, I tried my best, it is not working so I will keep it as seconds
