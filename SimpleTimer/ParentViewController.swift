@@ -24,7 +24,7 @@ class ParentViewController: UIViewController, TimeSaver {
         // Do any additional setup after loading the view.
     }
     @IBOutlet weak var timeSavedLabel: UILabel!
-    
+    @IBOutlet weak var timeAverageLabel: UILabel!
     @IBOutlet weak var timeDisplayedOfArray: UILabel!
     
     // Segue function
@@ -51,30 +51,23 @@ class ParentViewController: UIViewController, TimeSaver {
         
         
         //Displays the time on the screen by being implemented in the label and is displayed a a array
-        timeDisplayedOfArray.text = "Your time\(savedTimeValues)"
+        timeDisplayedOfArray.text = "Your time  \(savedTimeValues) seconds"
         
         
+        //What I want to happen
         //let times = savedTimeValues
         // let timesAverage = (savedTimeValues) / (quantityTimeValue)
-        
-        
-        
         var totalAcrossOfTrials = 0
         for time in savedTimeValues {
             totalAcrossOfTrials += savedTimeValues.count
         }
-        
         // Protect against division by zero
         var averageTime = 0
         if savedTimeValues.count > 0 {
             averageTime = totalAcrossOfTrials / quantityTimeValue
     }
-        
-        print("\(averageTime)")
-        
-        
-        //So I can see that it is working
-       // print("Number of times saved from your stopwatch is //\(savedTimeValues.count).")
-    
+    //Displaying average time in the label
+        timeAverageLabel.text = "Your Average of Times is \(averageTime)"
     }
+    
 }
