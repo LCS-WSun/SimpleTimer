@@ -77,29 +77,27 @@ class ParentViewController: UIViewController, TimeSaver {
         averageTime = totalAcrossOfTimes / savedTimeValues.count
             
             
-        //Trying to resolve only showing seconds issue - This does not seem to be working......
-                let averageHour = averageTime / 3600
-                     
-                let averageMinute = averageTime / 60
-                if averageMinute < 3600  {
-                averageTime = averageMinute
-                
-                if averageHour > 3600 {
-                averageTime = averageHour
-                        
-            }
-                let averageSeconds = averageTime
-                if averageSeconds < 60 {
-                averageTime = averageSeconds
-            }
+//        //Trying to resolve only showing seconds issue, I tried my best, it is not working so I will keep it as seconds 
+//                let averageHour = averageTime / 3600
+//
+//                let averageMinute = averageTime / 60
+//                if averageMinute < 3600  {
+//                averageTime = averageMinute
+//
+//                if averageHour >= 3600 {
+//                averageTime = averageHour
+//
+//            }
+//                let averageSeconds = averageTime
+//                if averageSeconds < 60 {
+//                averageTime = averageSeconds
+//            }
+//
+//        }
 
-        }
-        //Having strings of the hour, seconds and minutes
-        
-        
         
     //Displaying average time in the label with string interpolation
-        timeAverageLabel.text = "Your Average of Time is: \(averageTime) "
+        timeAverageLabel.text = "Your Average of Time is: \(averageTime) seconds "
         
         
 
