@@ -72,18 +72,42 @@ class ChildViewController: UIViewController {
         
         taskTimer.invalidate()
         timeElapsed = 0
-        labelTimeElapsed.text = ("0")
+        labelTimeElapsed.text = ("0:00:00")
     }
     
     // The Objc func is what is used to call back to the timer object and work with the function tick
     @objc func tick() {
+    
+
+    // Increment the time elapsed by 1 second
+    timeElapsed += 1
         
-        // Increment the time elapsed by 1 second
-        timeElapsed += 1
+    //Displaying the time in Hours, Minutes, Seconds
+  
+        let differentTimes = Int(floor(timeElapsed))
+        
+        let hour = differentTimes / 3600
+         
+        let minute = (differentTimes % 3600) / 60
+        var minuteString = "\(minute)"
+        if minute < 10 {
+            minuteString = "0\(minute)"
+    }
+        
+        let seconds = (differentTimes % 3600) % 60
+        var secondsString = "\(seconds)"
+        if seconds < 10 {
+            secondsString = "0\(seconds)"
+    }
+
         
         //Update the label by tapping into it with.text when we must change its property to string as it is a text and aswell to Int because it doesn't have to show 2 decimal places
         
-        labelTimeElapsed.text = String(Int(timeElapsed))
+        //labelTimeElapsed.text = String(Int(timeElapsed))
+        labelTimeElapsed.text = "\(hour):\(minuteString):\(secondsString)"
+        
+        
+        
     }
 }
 
