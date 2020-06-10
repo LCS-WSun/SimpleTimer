@@ -51,6 +51,7 @@ class ParentViewController: UIViewController, TimeSaver {
         var quantityTimeValue = savedTimeValues.count
         
         
+        
 //        //Trying to resolve only showing seconds issue don't know how to fix it
 //            let hour = quantityTimeValue / 3600
 //
@@ -80,8 +81,10 @@ class ParentViewController: UIViewController, TimeSaver {
         
         //New var called totalAcrossTimes set to 0 because well no time is stored yet
         var totalAcrossOfTimes = 0
+        
         //for time (defining a constant) in savedTimevalues AKA the array
         for time in savedTimeValues {
+            
         //totalAcrossOfTimes will add the values of time of the intervals stored in the structure and we set it to a Int because intially it is a Doudble. time is the constant and we assign it to the interval from the structure
         totalAcrossOfTimes += Int(time.interval)
     }
@@ -90,13 +93,14 @@ class ParentViewController: UIViewController, TimeSaver {
         //initial set average times to 0
        var averageTime: Double = 0
         
-        
         //only will perform the equation when it is above 0
         if savedTimeValues.count > 0 {
+            
         //average time is equal to times values in the array divided by the stored value of times in the array
         averageTime = Double(totalAcrossOfTimes) / Double(savedTimeValues.count)
         averageTime.round()
-            
+         
+           
             
             
 //        //Trying to resolve only showing seconds issue, I tried my best, it is not working so I will keep it as seconds
@@ -118,7 +122,7 @@ class ParentViewController: UIViewController, TimeSaver {
 //        }
 
     //Displaying average time in the label with string interpolation
-        timeAverageLabel.text = "Your Average of Time is: \(averageTime) seconds "
+        timeAverageLabel.text = "Your Average of Time is: \(averageTime) seconds"
         
         
 
